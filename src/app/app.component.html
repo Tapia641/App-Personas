@@ -20,7 +20,7 @@
         </div>
 
         <div class="col">
-            <button type="submit" class="btn btn-primary">Agregar persona</button>
+            <button (click)="onAgregarPersona()" type="submit" class="btn btn-primary">Agregar persona</button>
         </div>
 
     </div>
@@ -36,10 +36,10 @@
         </thead>
 
         <tbody>
-            <tr class="table-light">
-                <th scope="row">Light</th>
-                <td>Column content</td>
-                <td>Column content</td>
+            <tr class="table-light" *ngFor="let persona of personas; let i = index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{persona.nombre}}</td>
+                <td>{{persona.apellido}}</td>
             </tr>
         </tbody>
 
