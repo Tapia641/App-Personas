@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      
+      <label>Titulo persona:</label>
+      <input type="text" class="form-control" [(ngModel)]="tituloPersona">
+
+      <!-- CONCEPTO DE INTERPOLACION -->
+      {{tituloPersona}}
+
+      <h1>Lista de personas:</h1>
+
+      <!-- PROPERTY BINDING -->
+      <button class="btn btn-primary" [disabled]="!agregarPersona" (click)="onCrearPersona()">Agregar Persona</button>
+
+      <!-- DIRECTIVA *NGIF -->
+      <p *ngIf="personaCreada">{{agregarPersonaStatus}}</p>
+
+    </div>
+  </div>
+</div> 
