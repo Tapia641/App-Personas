@@ -1,2 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+@font-face {
+    font-family: Google-sans;
+    src: url(assets/fonts/google-sans/ProductSans-Regular.ttf) format("opentype");
+  }
+
+  @font-face {
+    font-family: Google-sans-light;
+    src: url(assets/fonts/google-sans/ProductSans-Light.ttf) format("opentype");
+  }
+
+  * {
+    font-family: 'Google-sans-light';
+  }
+
+  .btn.btn-square {
+    border-radius: 0;
+  }
+
+  .bg-dark {
+    background-color: #212529 !important;
+}
+
+
+
+.navbar {
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999;
+
+  /* the rest of your styling */
+}

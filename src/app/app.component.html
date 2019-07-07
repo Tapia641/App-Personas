@@ -1,13 +1,74 @@
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="../assets/images/problem.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+        Notas online
+    </a>
+</nav>
+
+
+<p></p>
 <div class="container">
-    <div class="col-xs-12">
-        <h1>{{titulo}}</h1>
+    <div class="row">
+
+        <div class="col-6">
+            <h2>Ponte al día :)</h2>
+            <h3 class="text-muted">Toma nota de tus tareas escolares.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </h3>
+        </div>
+
+        <div class="col-6">
+            <!-- USANDO SERVICIOS -->
+            <app-formulario>
+            </app-formulario>
+        </div>
+
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="card-columns">
+        <app-listapersonas *ngFor="let personaElemento of personas; let i = index" [persona]="personaElemento"
+            [indice]="i">
+        </app-listapersonas>
+    </div>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="page-footer font-small indigo">
+
+    <!-- Footer Links -->
+    <div class="container">
+
+        <!-- Grid row-->
+        <hr class="rgba-white-light" style="margin: 0 15%;">
+
+        <!-- Grid row-->
+        <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+
+            <!-- Grid column -->
+            <div class="col-md-8 col-12 mt-5">
+                <p style="line-height: 1.7rem">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ipsam praesentium laudantium
+                    molestiae distinctio rem possimus provident, dolor quaerat, mollitia modi quia. Placeat, ipsa
+                    perferendis! Animi laboriosam ex corporis voluptatibus!
+                </p>
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row-->
+        <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+
     </div>
 
-    <!-- USANDO SERVICIOS -->
-    <app-formulario>
-    </app-formulario>
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+        <a href="https://github.com/Tapia641"> Luis Enrique Hernández Tapia</a>
+    </div>
+    <!-- Copyright -->
 
-    
-    <!-- PROPERTY BINDING WITH INPUT -->
-    <app-listapersonas *ngFor="let personaElemento of personas; let i = index" [persona]="personaElemento" [indice]="i">
-    </app-listapersonas>
+</footer>
+<!-- Footer -->

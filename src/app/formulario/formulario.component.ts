@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Persona } from '../persona.model';
-import { LoginService } from '../loginService.service';
 import { PersonasService } from '../personas.service';
 
 @Component({
@@ -17,17 +16,23 @@ export class FormularioComponent implements OnInit {
 
   nombreInput: string;
   apellidoInput: string;
+  showSuccessful: boolean = false;
 
-  constructor(private personaservice: PersonasService) { }
+  constructor(private personasservice: PersonasService) {
+    this.personasservice.saludar.subscribe(
+      (indice: number) => alert("El indice es: " + indice));
+  }
 
   ngOnInit() {
   }
 
   onAgregarPersona() {
     let persona1 = new Persona(this.nombreInput, this.apellidoInput);
-    this.personaservice.agregarPersona(persona1);
+    this.personasservice.agregarPersona(persona1);
+    this.showSuccessful = true;
     //this.loginservice.enviarMensaje("Enviamos persona: " + persona1.nombre);
     //this.personaCreada.emit(persona1);
   }
+
 
 }

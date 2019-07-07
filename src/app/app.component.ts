@@ -9,7 +9,7 @@ import { PersonasService } from './personas.service';
 })
 export class AppComponent implements OnInit {
 
-  titulo = 'Listado de personas.';
+  titulo = 'Tareas.';
 
   // ARREGLO DE TIPO PERSONA
   personas: Persona[] = [];
